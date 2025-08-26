@@ -1,19 +1,15 @@
-# 🎈 Blank app template
+import streamlit as st
+import time
 
-A simple Streamlit app template for you to modify!
+st.set_page_config(page_title="🎂 Doğum Günü Kartı 🎂", page_icon="🎉")
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+st.title("🎉🎂 Mutlu Yıllar Ali! 🎂🎉")
+st.subheader("Senin için özel bir sürpriz Guts- pardon Ali💖")
 
-### How to run it on your own machine
+# Animasyonlu yazı
+message = "İyi ki doğdun, nice mutlu senelere! 🎁✨"
+for i in range(1, len(message)+1):
+    st.write(message[:i])
+    time.sleep(0.05)
 
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+st.balloons()
